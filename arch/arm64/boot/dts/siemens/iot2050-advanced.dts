@@ -11,6 +11,11 @@
 / {
 	model = "SIMATIC IOT2050-ADVANCED";
 
+	aliases {
+		mmc0 = &sdhci1;
+		mmc1 = &sdhci0;
+	};
+
 	memory@80000000 {
 		device_type = "memory";
 		/* 2G RAM */
