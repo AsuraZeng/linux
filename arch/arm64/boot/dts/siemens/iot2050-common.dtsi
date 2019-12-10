@@ -536,6 +536,30 @@
 		/* ti,enable-force-pwm; */
 		ti,enable-vout-discharge;
 	};
+
+	/*D4200*/
+	pcal9535_1: gpio@20 {
+		compatible = "nxp,pcal9535";
+		reg = <0x20>;
+		#gpio-cells = <2>;
+		gpio-controller;
+	};
+
+	/*D4201*/
+	pcal9535_2: gpio@21 {
+		compatible = "nxp,pcal9535";
+		reg = <0x21>;
+		#gpio-cells = <2>;
+		gpio-controller;
+	};
+
+	/*D4202*/
+	pcal9535_3: gpio@25 {
+		compatible = "nxp,pcal9535";
+		reg = <0x25>;
+		#gpio-cells = <2>;
+		gpio-controller;
+	};
 };
 
 &main_i2c0 {
@@ -565,30 +589,6 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&main_i2c2_pins_default>;
 	clock-frequency = <400000>;
-
-	/*D4200*/
-	pcal9535_1: gpio@20 {
-		compatible = "nxp,pcal9535";
-		reg = <0x20>;
-		#gpio-cells = <2>;
-		gpio-controller;
-	};
-
-	/*D4201*/
-	pcal9535_2: gpio@21 {
-		compatible = "nxp,pcal9535";
-		reg = <0x21>;
-		#gpio-cells = <2>;
-		gpio-controller;
-	};
-
-	/*D4202*/
-	pcal9535_3: gpio@25 {
-		compatible = "nxp,pcal9535";
-		reg = <0x25>;
-		#gpio-cells = <2>;
-		gpio-controller;
-	};
 };
 
 &main_i2c3 {
