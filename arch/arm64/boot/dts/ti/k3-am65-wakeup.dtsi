@@ -2,7 +2,7 @@
 /*
  * Device Tree Source for AM6 SoC Family Wakeup Domain peripherals
  *
- * Copyright (C) 2016-2018 Texas Instruments Incorporated - https://www.ti.com/
+ * Copyright (C) 2016-2018 Texas Instruments Incorporated - http://www.ti.com/
  */
 
 &cbass_wakeup {
@@ -74,10 +74,10 @@
 		ti,intr-trigger-type = <1>;
 		interrupt-controller;
 		interrupt-parent = <&gic500>;
-		#interrupt-cells = <2>;
+		#interrupt-cells = <1>;
 		ti,sci = <&dmsc>;
-		ti,sci-dst-id = <56>;
-		ti,sci-rm-range-girq = <0x4>;
+		ti,sci-dev-id = <156>;
+		ti,interrupt-ranges = <0 712 16>;
 	};
 
 	wkup_gpio0: wkup_gpio0@42110000 {
@@ -86,7 +86,7 @@
 		gpio-controller;
 		#gpio-cells = <2>;
 		interrupt-parent = <&intr_wkup_gpio>;
-		interrupts = <59 128>, <59 129>, <59 130>, <59 131>;
+		interrupts = <60>, <61>, <62>, <63>;
 		interrupt-controller;
 		#interrupt-cells = <2>;
 		ti,ngpio = <56>;
@@ -95,7 +95,7 @@
 		clock-names = "gpio";
 	};
 
-	wkup_vtm0: thermal@42050000 {
+	wkup_vtm0: wkup_vtm0@42050000 {
 		compatible = "ti,am654-vtm";
 		reg = <0x42050000 0x25c>;
 		power-domains = <&k3_pds 80 TI_SCI_PD_EXCLUSIVE>;
@@ -103,6 +103,6 @@
 	};
 
 	thermal_zones: thermal-zones {
-		#include "k3-am654-industrial-thermal.dtsi"
+		#include "am654-industrial-thermal.dtsi"
 	};
 };
