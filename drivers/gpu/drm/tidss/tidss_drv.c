@@ -3,7 +3,7 @@
  * Copyright (C) 2018 Texas Instruments Incorporated - http://www.ti.com/
  * Author: Tomi Valkeinen <tomi.valkeinen@ti.com>
  */
-
+#define DEBUG 1
 #include <linux/console.h>
 #include <linux/of_device.h>
 #include <linux/module.h>

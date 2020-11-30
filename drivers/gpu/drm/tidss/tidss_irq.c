@@ -3,7 +3,7 @@
  * Copyright (C) 2018 Texas Instruments Incorporated - http://www.ti.com/
  * Author: Tomi Valkeinen <tomi.valkeinen@ti.com>
  */
-
+#define DEBUG 1
 #include <drm/drm_print.h>
 
 #include "tidss_crtc.h"

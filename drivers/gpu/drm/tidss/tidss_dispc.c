@@ -3,7 +3,7 @@
  * Copyright (C) 2016-2018 Texas Instruments Incorporated - http://www.ti.com/
  * Author: Jyri Sarha <jsarha@ti.com>
  */
-
+#define DEBUG 1
 #include <linux/clk.h>
 #include <linux/delay.h>
 #include <linux/dma-mapping.h>

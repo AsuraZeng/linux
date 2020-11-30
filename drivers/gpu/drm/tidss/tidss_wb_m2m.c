@@ -5,7 +5,7 @@
  *
  * Based on the virtual v4l2-mem2mem example device
  */
-
+#define DEBUG 1
 #include <linux/module.h>
 #include <linux/init.h>
 #include <linux/interrupt.h>

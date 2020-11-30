@@ -3,7 +3,7 @@
  * Copyright (C) 2019 Texas Instruments Incorporated -  http://www.ti.com/
  * Author: Benoit Parrot <bparrot@ti.com>
  */
-
+#define DEBUG 1
 #include <linux/module.h>
 #include <linux/init.h>
 
