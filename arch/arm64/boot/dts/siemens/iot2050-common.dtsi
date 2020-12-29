@@ -183,48 +183,6 @@
 	};
 };
 
-&tx_pru0_0 {
-	status = "disabled";
-};
-
-&tx_pru0_1 {
-	status = "disabled";
-};
-
-&tx_pru1_0 {
-	status = "disabled";
-};
-
-&tx_pru1_1 {
-	status = "disabled";
-};
-
-&tx_pru2_0 {
-	status = "disabled";
-};
-
-&tx_pru2_1 {
-	status = "disabled";
-};
-
-&pruss0_eth {
-	compatible = "ti,am654-icssg-prueth-sr1";
-	prus = <&pru0_0>, <&rtu0_0>, <&pru0_1>, <&rtu0_1>;
-	firmware-name = "ti-pruss/am65x-pru0-prueth-fw.elf",
-			"ti-pruss/am65x-rtu0-prueth-fw.elf",
-			"ti-pruss/am65x-pru1-prueth-fw.elf",
-			"ti-pruss/am65x-rtu1-prueth-fw.elf";
-	ti,pruss-gp-mux-sel = <2>,      /* MII mode */
-			      <2>,
-			      <2>,      /* MII mode */
-			      <2>;
-};
-
-&pruss0_emac1 {
-	iep = <&icssg0_iep1>;
-};
-
-
 &wkup_pmx0 {
 	wkup_i2c0_pins_default: wkup-i2c0-pins-default {
 		pinctrl-single,pins = <
@@ -643,7 +601,6 @@
 	pinctrl-0 = <&main_mmc1_pins_default>;
 	ti,driver-strength-ohm = <50>;
 	disable-wp;
-	no-1-8-v; //FOR PG1 board,need to be delete On the PG2
 };
 
 &gpu {
